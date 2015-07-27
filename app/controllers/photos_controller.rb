@@ -1,4 +1,5 @@
 class PhotosController < ApplicationController
+  before_action :set_photo, only: [:show, :edit, :update, :destroy]
   
   def index
     @photos = Photo.all
@@ -16,16 +17,33 @@ class PhotosController < ApplicationController
        render 'new'
     end
   end
+end
 
   def edit
+   
   end
 
   def show
   end
 
+  def destroy 
+    @photo.destroy 
+    respond_to do |format|
+      format.html {redirect_to photos_url, noitce: 'Post was deleted'}
+      format.json { head :no_content }
+    end
+  end
+
   private
+
+  def set_photo
+    @photo = Photo.find(params[:id])
+  end
 
   def photo_params
     params.require(:photo).permit(:title, :url)
   end
-end
+
+  def check_logged_in
+  end
+

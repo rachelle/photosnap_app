@@ -1,50 +1,23 @@
 <div class="text-center">
-  <h1>Sign Up</h1>
-  <%= form_for @user do |f| %> 
-  <%- if @user.errors.any? %> 
+  
+<h1>Login</h1> 
 
-  <div class="error_messages">
-    <h2>Form is invalid</h2> 
-    <ul> 
-      <% for message in @user.errors.full_messages %> 
-        <li><%= message %></li> 
-      <% end %> 
-    </ul> 
-  </div> 
-<% end %>
-  <div class= "field">
-    Name:
-      <%= f.text_field :name %> 
-      <br> 
-      <%= f.text_field :email %> 
-  </div> 
-
-  <div class= "field"> 
-    <%= f.label :password %> 
-    <%= f.password_field :password %> 
+<%= form_tag sessions_path do %> 
+  <div class="field">
+    <%= label_tag :email %> 
+    <%= text_field_tag :email, params[:email] %>
   </div> 
 
   <div class="field">
-    <%= f.label :password_confirmation %> 
-    <%= f.password_field :password_confirmation %> 
+    <%= label_tag :password %>
+    <%= password_field_tag :password %>
   </div> 
 
-  <div class="actions"> 
-  <%= f.submit %>
-  </div> 
-<% end %> 
 
-  <button class="btn btn-signup">Sign Up</button>
-</div>
-<div class="row text-center">
-  <div class="col-md-4 col-sm-12">
-    first
-  </div>
-  <div class="col-md-4 col-sm-12">
-    2nd
-  </div>
-  <div class="col-md-4 col-sm-12">
-    3rd
-  </div>
-</div>
+  <div class="actions">
+    <%= submit_tag "Log In" %>
+  </div> 
+<% end %>
+
+
 

@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
 
   def current_user 
     #find method will error with nil, find_by will not error with nil
-    @current_user ||= User.find_by(id: session[:user_id])
+  @current_user ||= User.find_by(id: session[:user_id]) 
   end
 
   def logged_in?
