@@ -20,6 +20,7 @@ class PhotosController < ApplicationController
 end
 
   def edit
+    @photo = Photo.find(params[:id])
    
   end
 
@@ -27,12 +28,11 @@ end
   end
 
   def destroy 
-    @photo.destroy 
-    respond_to do |format|
-      format.html {redirect_to photos_url, noitce: 'Post was deleted'}
-      format.json { head :no_content }
-    end
+    @photo = Photo.find(params[:id])
+    if @contact.update_attritbutes(photo_params)
+      redirect_to users_path(current_user)
   end
+end
 
   private
 
