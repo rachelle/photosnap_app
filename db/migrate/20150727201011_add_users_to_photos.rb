@@ -1,4 +1,5 @@
 class AddUsersToPhotos < ActiveRecord::Migration
   def change
-   add_column :photos, :user_id, :intger
+   remove_column :photos, :user_id, :intger
+end
 end
