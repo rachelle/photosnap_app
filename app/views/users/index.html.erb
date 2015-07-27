@@ -1,0 +1,10 @@
+<h1>Welcome to PhotoSnap</h1>
+
+<% @users.each do |user| %> 
+  <p> 
+    <%= user.email %>
+    <br> 
+    <%= link_to 'View Profile', user_path(user) %> 
+  </p>
+
+<% end %> 
