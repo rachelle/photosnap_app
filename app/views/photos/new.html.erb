@@ -1,7 +1,23 @@
 <h1>Photo Feed</h1>
+
+<table class= "table table-striped">
+<%= form_for @photo, :html => { :multipart => true } do |f| %>
+<div class="field">
+  <%= f.file_field :image %>
+
+ 
+
   
-  <%= form_for @photo do |f| %> 
-    <%= f.text_field :title %> 
+    title:
+    <%= f.text_field :title %>
+    <br> 
+    url:
     <%= f.text_field :url %> 
-    <%= f.submit %> 
+    <br> 
+    caption:
+    <%= f.text_field :caption %>
+    <br>
+    <%= f.submit "Upload" %> 
+  </div>
   <% end %> 
+</table>

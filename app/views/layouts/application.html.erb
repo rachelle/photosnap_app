@@ -14,13 +14,14 @@
     </div> 
   <% end %> 
 
+
    <% if current_user %> 
     <p>Hello, <%= current_user.email %>
-    </p> 
-    <%= link_to 'Add post', new_photo_path %> 
+    </p>  
+    <%= link_to 'Add post', new_photo_path, :class => "post" %> 
     <%= link_to 'All Users', users_path %> 
     <%= link_to 'Your Profile', user_path(current_user) %>
-    <%= link_to 'Logout', logout_path, method: :delete, data: {confirm: "Are you sure you want to logout?"} %>
+    <%= link_to 'Logout', logout_path, method: :delete, data: {confirm: "Are you sure you want to logout?"}, class: "btn" %>
   <% else %>
     <%= link_to 'Sign Up', new_user_path %> 
     <%= link_to 'Please login', login_path %> 
