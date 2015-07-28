@@ -1,4 +1,8 @@
 <div class="text-center">
+<div class= "header">
+  <h1>Welcome to PhotoSnap</h1>
+</div>
+ <%= image_tag("city.jpg", :class => "city") %> 
 <h1>Sign Up</h1>
 <%= form_for @user do |f| %> 
 <% if @user.errors.any? %>
@@ -12,30 +16,44 @@
     </ul>
   </div>
 <% end %>
-<div class= "field"> 
+<div class="container">
+<div class= "form-group"> 
   Name
-  <%= f.text_field :name %>
+  <%= f.text_field :name, class: 'form-control myinput' %>
 </div>
   <br>
-<div class= "field">
+<div class= "form-group">
   <%= f.label :email %> 
   <%= f.text_field :email %>
 </div> 
 <br>
-<div class="field">
+<div class="form-group">
   <%= f.label :password %> 
   <%= f.password_field :password %> 
 </div> 
 
-<div class="field">
+<div class="form-group">
   <%= f.label :password_confirmation %> 
   <%= f.password_field :password_confirmation %> 
 </div> 
 <br>
 
 <div class="actions"> 
-  <%= f.submit "submit", class: "button" %>
+  <%= f.submit "submit", class: "btn btn-successs" %>
 </div> 
 <% end %> 
+</div>
+
+<div class="row">
+  <div class="col-sm-4">.col-md-4</div>
+  <div class="col-sm-4">.col-md-4</div>
+  <div class="col-sm-4">.col-md-4</div>
+</div>
+
+<div class="footer">
+he
+</div>
+</div>
+
 
 

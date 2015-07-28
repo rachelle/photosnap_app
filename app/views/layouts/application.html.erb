@@ -15,17 +15,40 @@
   <% end %> 
 
 
-   <% if current_user %> 
-    <p>Hello, <%= current_user.email %>
-    </p>  
-    <%= link_to 'Add post', new_photo_path, :class => "post" %> 
-    <%= link_to 'All Users', users_path %> 
-    <%= link_to 'Your Profile', user_path(current_user) %>
-    <%= link_to 'Logout', logout_path, method: :delete, data: {confirm: "Are you sure you want to logout?"}, class: "btn" %>
-  <% else %>
-    <%= link_to 'Sign Up', new_user_path %> 
-    <%= link_to 'Please login', login_path %> 
-  <% end %> 
+   
+
+  <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">PhotoSnap</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <% if current_user %> 
+              <p>Hello, <%= current_user.email %>
+              </p>  
+              <li><%= link_to 'Add post', new_photo_path, :class => "post" %> </li>
+
+              <li><%= link_to 'Newsfeed', users_path %> </li>
+              <li><%= link_to 'Your Profile', user_path(current_user) %></li>
+              <li><%= link_to 'Logout', logout_path, method: :delete, data: {confirm: "Are you sure you want to logout?"}, class: "btn" %>
+            <% else %>
+              <li><%= link_to 'Register', new_user_path %> </li>
+              <li><%= link_to 'Please login', login_path %> </li>
+            <% end %> 
+          </ul>
+        </li>
+      </ul>
+
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
 
 <%= yield %>
 
