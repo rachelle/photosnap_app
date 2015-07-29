@@ -7,6 +7,7 @@
     <div class="container">
       <%= @photos.each do |photo| %>
       <%= image_tag photo.image(:medium) %>
+      <%= photo.caption %>
       <% end %> 
     </div>
   </div>

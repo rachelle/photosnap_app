@@ -1,6 +1,6 @@
 class PhotosController < ApplicationController
   before_action :set_photo, only: [:show, :edit, :update, :destroy]
-  
+
   # def like
   #   binding.pry
   #   photo = Photo.find(params[:id])
@@ -34,7 +34,7 @@ class PhotosController < ApplicationController
 
   def update
     if @photo.update(photo_params)
-      flash[:sucess] = "Post Updated"
+      flash[:success] = "Post Updated"
       redirect_to photos_path
     else 
       render 'edit'
@@ -47,18 +47,22 @@ class PhotosController < ApplicationController
       redirect_to users_path(current_user)
   end
 
-
   private
  
   def photo_params
     params.require(:photo).permit(:title, :image, :caption, :url)
   end
 
-  def check_logged_in
+    def check_logged_in
   end
 
-   def set_photo
+
+  def set_photo
     @photo = Photo.find(params[:id])
   end
 end
+
+  
+
+
 

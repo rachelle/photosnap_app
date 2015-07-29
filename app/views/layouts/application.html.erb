@@ -34,9 +34,9 @@
               <p>Hello, <%= current_user.email %>
               </p>  
               <li><%= link_to 'Add post', new_photo_path, :class => "post" %> </li>
-
-              <li><%= link_to 'Newsfeed', photos_path %> </li>
-              <li><%= link_to 'Your Profile', user_path(current_user) %></li>
+              <li><%= link_To 'Users', users_path %></li>
+              <li><%= link_to 'Newsfeed', photos_path %></li>
+              <li><%= link_to 'Home', user_path(current_user) %></li>
               <li><%= link_to 'Logout', logout_path, method: :delete, data: {confirm: "Are you sure you want to logout?"}, class: "btn" %>
             <% else %>
               <li><%= link_to 'Register', new_user_path %> </li>

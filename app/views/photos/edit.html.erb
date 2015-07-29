@@ -28,6 +28,11 @@
               <%= f.submit "Save changes", class: "btn btn-primary" %>
     <% end %>
 
+  <div class="text-center">
+    <%= link_to "Delete Post", photo_path(@photo), method: :delete, data: { confirm: 'Are you sure yo
+      u want to delete this post?' } %>
+    <%= link_to 'cancel', photos_path %>
+
     
   </div>
 </div>
