@@ -1,3 +1,9 @@
-<h1>Welcome to photosnap</h1> 
-
-
+<h1>All Users</h1> 
+<ul>
+  <% @users.each do |user| %>
+    <li>
+      <%= link_to image_tag(user.avatar.url(:thumb)), user_path(user.id) %>
+    </li>
+    <li><%= user.email %></li>
+  <% end %>
+</ul>

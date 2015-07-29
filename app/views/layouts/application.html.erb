@@ -9,43 +9,45 @@
 <body>
 
   <% flash.each do |name, message| %>
-    <div class="flash-message flash-message-<%= name %>">
-      <%= message %> 
-    </div> 
+  <div class="flash-message flash-message-<%= name %>">
+    <%= message %> 
+  </div> 
   <% end %> 
 
 
    
 
-  <nav class="navbar navbar-default">
+<nav class="navbar navbar-default">
   <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <a class="navbar-brand" href="#">PhotoSnap</a>
     </div>
+    <div class="pull-right">
+      <% if current_user %> 
+        Hello, <%= current_user.name %>
+        <%= image_tag current_user.avatar.url(:thumb), class: 'img-circle' %>
+      <% end %> 
+    </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu <span class="caret"></span></a>
+<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+  <ul class="nav navbar-nav">
+    <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <% if current_user %> 
-              <p>Hello, <%= current_user.email %>
-              </p>  
+            <% if current_user %>  
               <li><%= link_to 'Add post', new_photo_path, :class => "post" %> </li>
-              <li><%= link_To 'Users', users_path %></li>
+              <li><%= link_to 'Users', users_path %></li>
               <li><%= link_to 'Newsfeed', photos_path %></li>
               <li><%= link_to 'Home', user_path(current_user) %></li>
               <li><%= link_to 'Logout', logout_path, method: :delete, data: {confirm: "Are you sure you want to logout?"}, class: "btn" %>
             <% else %>
               <li><%= link_to 'Register', new_user_path %> </li>
-              <li><%= link_to 'Please login', login_path %> </li>
+              <li><%= link_to 'Login', login_path %> </li>
             <% end %> 
           </ul>
         </li>
       </ul>
-
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
