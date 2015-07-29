@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
    get '/login', to: 'sessions#new'
 
+   # get 'photos/:id/like'
+
    resources :sessions, only: [:new, :create, :destroy]
 
    resources :users 

@@ -1,25 +1,26 @@
-<div class= "text-center">
-
-<h1>Photo Feed</h1>
-
-<table class= "table table-striped">
-<%= form_for @photo, :html => { :multipart => true } do |f| %>
-<div class="field">
-  <%= f.file_field :image %>
-
- 
-
-  
-    title:
-    <%= f.text_field :title %>
-    <br> 
-    url:
-    <%= f.text_field :url %> 
-    <br> 
-    caption:
-    <%= f.text_field :caption %>
-    <br>
-    <%= f.submit "Upload" %> 
+  <div class="text-center">
+  <h1>Post New Photo</h1>
   </div>
-  <% end %> 
-</table>
+  <div class="container">
+    <table class= "table table-striped">
+      <br>
+      <%= form_for @photo, :html => { :multipart => true } do |f| %>
+      <br>
+      <div class="field">
+        <%= f.file_field :image %>
+      <br>
+      <h3>url:</h3> 
+      <%= f.text_field :url %>
+      <br>
+      <h3>title:</h3>
+      <%= f.text_field :title %>
+      <br> 
+      <h3>caption:</h3> 
+      <%= f.text_field :caption %>
+      <br>
+      <%= f.submit "Upload" %> 
+  </div>
+    <% end %> 
+  </table>
+
+

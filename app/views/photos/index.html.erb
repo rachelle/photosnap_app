@@ -1,2 +1,14 @@
-<h1>Photos#index</h1>
+
+  <div class="text-center">
+    <div class="feed">
+    <h1>Photo Feed</h1>
+    </div>
+    <br>
+    <div class="container">
+      <%= @photos.each do |photo| %>
+      <%= image_tag photo.image(:medium) %>
+      <% end %> 
+    </div>
+  </div>
+
 
