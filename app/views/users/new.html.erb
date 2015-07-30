@@ -7,15 +7,15 @@
     <h1>Sign Up</h1>
       <%= form_for @user do |f| %> 
       <% if @user.errors.any? %>
-    <div class="error_messages">
-      <h2>Form is invalid</h2>
-        <ul> 
-          <% for message in @user.errors.full_messages %> 
+        <div class="error_messages">
+          <h2>Form is invalid</h2>
+          <ul> 
+            <% for message in @user.errors.full_messages %> 
             <li><%= message %></li>
-           <% end %>
+        <% end %>
         </ul>
+      </div>
     </div>
-  </div>
   <% end %>
 </div>
 <div class="container">
@@ -47,14 +47,17 @@
   <div class="checkbox">
     <label><input type="checkbox"> Remember me</label>
   </div>
+  <div class="text-center">  
+
   <div class="actions"> 
     <%= f.submit "submit",class: "button" %>
   </div> 
   <% end %> 
 </div>
-  
 <div class="row">
-  <h1>Show your World</h1> 
+  <div class="text-center">
+    <h1>Show your World</h1> 
+  </div>
     <div class="col-sm-4">
       <%= image_tag("green.jpg", :class => "box") %> 
     </div>
@@ -63,9 +66,11 @@
     </div>
     <div class="col-sm-4">
       <%= image_tag("water.jpg", :class => "box") %>
-    </div> 
+    </div>
    </div>
+  </div>
     <div class="footer">
+      <div class="text-center">
       <br>
       <br>
       <br>

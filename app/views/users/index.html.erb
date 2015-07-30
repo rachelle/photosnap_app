@@ -1,7 +1,7 @@
+<div class="text-center">
 <h1>All Users</h1> 
   <ul>
     <% @users.each do |user| %>
-    <div class="col-md-4">
       <br>
       <li>
         <%= link_to image_tag(user.avatar.url(:medium)), user_path(user.id), class: 'feed-pictures' %>
@@ -9,13 +9,20 @@
       <h3>
        <li> username:
       <%= user.name %></li>
-    </h3>
+      </h3>
       <br>
       <br>
-    </div>
-   <% end %>
-
-</ul>
+    <% end %>
+  </ul>
+</div> 
+<div class="footer">
+  <div class="text-center">
+    <br>
+    <br>
+    <br>
+    <h1>&copy; PhotoSnap</h1>
+  </div>
+</div>
 
 
 

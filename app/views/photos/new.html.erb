@@ -2,6 +2,7 @@
   <h1>Post a new photo</h1>
   </div>
   <div class="container">
+  <!-- a photo form for users to upload a new photo -->
   <table class= "table table-striped">
       <br>
       <%= form_for @photo, :html => { :multipart => true } do |f| %>
@@ -20,13 +21,13 @@
     <% end %> 
   </table>
 </div>
-
-    <div class="secfoot">
-      <br>
-      <br>
-      <br>
-      <h1>&copy; PhotoSnap</h1>
-    
-    </div>
+<div class="new-photo">
+  <div class="text-center">
+    <br>
+    <br>
+    <br>
+    <h1>&copy; PhotoSnap</h1>
+  </div>
+</div> 
 
 
