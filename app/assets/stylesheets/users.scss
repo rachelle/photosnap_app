@@ -2,8 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
-
 .footer{
   margin-top: 20px;
   background-color:#FF7100;
@@ -25,4 +23,9 @@
 h1{
   color:#E10707;
 }
+
+a:link {
+    text-decoration: none;
+}
+
 

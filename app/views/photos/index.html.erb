@@ -5,11 +5,25 @@
   <br>
   <div class="container">
   <% @photos.each do |photo| %>
-    <div class="col-md-4">
+     <div class="col-md-4">
+      <h3>
+
+      Username: <%= photo.user.name %>
+      </h3>
+       <br>
       <%= image_tag photo.image(:medium), class: 'feed-pictures' %>
-      <%= photo.user.name %>
+      <br>
+      <h3>
+      Caption:
       <%= photo.caption %>
-    </div>
-  <% end %> 
+    </h3>
+  </div>
+     <% end %>
   </div>
 </div>
+
+
+
+
+
+     

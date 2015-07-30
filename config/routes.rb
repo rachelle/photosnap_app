@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
    
-   root 'users#new'
+  root 'users#new'
 
    delete '/logout', to: 'sessions#destroy'
 
@@ -12,7 +12,10 @@ Rails.application.routes.draw do
 
    resources :users 
 
-   resources :photos
+   resources :photos do
+
+    resources :comments
 
  end
+end
 

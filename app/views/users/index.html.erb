@@ -1,9 +1,23 @@
 <h1>All Users</h1> 
-<ul>
-  <% @users.each do |user| %>
-    <li>
-      <%= link_to image_tag(user.avatar.url(:thumb)), user_path(user.id) %>
-    </li>
-    <li><%= user.email %></li>
-  <% end %>
+  <ul>
+    <% @users.each do |user| %>
+    <div class="col-md-4">
+      <br>
+      <li>
+        <%= link_to image_tag(user.avatar.url(:medium)), user_path(user.id) %>
+      </li>
+      <h3>
+       <li> username:
+      <%= user.name %></li>
+    </h3>
+      <br>
+      <br>
+    </div>
+   <% end %>
+
 </ul>
+
+
+
+
+

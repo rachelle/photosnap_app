@@ -1,8 +1,16 @@
 <div class="text-center">
-  
+ <div class="container"> 
 <h1>Login</h1> 
+<br>
+  <%= image_tag("cameras.gif", :class => "camera") %>
+  <%= form_tag sessions_path do %> 
+  
+  <div class="field">
+    <%= label_tag :name %>
+    <%= text_field_tag :name,
+      params[:name] %>
+  </div>
 
-<%= form_tag sessions_path do %> 
   <div class="field">
     <%= label_tag :email %> 
     <%= text_field_tag :email, params[:email] %>
@@ -13,16 +21,13 @@
     <%= password_field_tag :password %>
   </div> 
 
-  <div class="field">
-    <%= label_tag :name %>
-    <%= text_field_tag :name,
-      params[:name] %>
-  </div>
 
-  <div class="actions">
-    <%= submit_tag "Log In", class: "button" %>
-  </div> 
-<% end %>
+ 
+    <div class="actions">
+      <%= submit_tag "Log In", class: "button" %>
+    </div> 
+  <% end %>
+</div>
 
 
 

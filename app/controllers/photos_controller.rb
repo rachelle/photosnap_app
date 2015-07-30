@@ -19,7 +19,7 @@ class PhotosController < ApplicationController
     @photo = current_user.photos.new
   end
 
-  def create
+ def create
     @photo = current_user.photos.create(photo_params)
     if @photo.save
        redirect_to photos_path(current_user)
@@ -47,13 +47,14 @@ class PhotosController < ApplicationController
       redirect_to users_path(current_user)
   end
 
+
   private
  
   def photo_params
     params.require(:photo).permit(:title, :image, :caption, :url)
   end
 
-    def check_logged_in
+  def check_logged_in
   end
 
 
@@ -61,6 +62,7 @@ class PhotosController < ApplicationController
     @photo = Photo.find(params[:id])
   end
 end
+
 
   
 

@@ -1,32 +1,34 @@
-  <div class="text-center">
-  <h1>Post New Photo</h1>
+ <div class="text-center">
+  <h1>Post a new photo</h1>
   </div>
   <div class="container">
-    <table class= "table table-striped">
+  <table class= "table table-striped">
       <br>
       <%= form_for @photo, :html => { :multipart => true } do |f| %>
       <br>
-      <div class="field">
-        <%= f.file_field :image %>
-      <br>
+    <div class="field">
       <h3>url:</h3> 
       <%= f.text_field :url %>
       <br>
       <h3>title:</h3>
       <%= f.text_field :title %>
       <br> 
-      <h3>caption:</h3> 
+      <h3>Caption:</h3>
       <%= f.text_field :caption %>
       <br>
-      <%= f.submit "Upload" %> 
+      <%= f.file_field :image %>
+      <br>
       <%= f.submit "Save changes", class: "btn btn-primary" %>
-  </div>
+    </div>
     <% end %> 
   </table>
 </div>
 
-    <div class="footer">
-    
+    <div class="secfoot">
+      <br>
+      <br>
+      <br>
+      <h1>&copy; PhotoSnap</h1>
     
     </div>
 
