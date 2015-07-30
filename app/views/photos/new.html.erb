@@ -1,33 +1,40 @@
  <div class="text-center">
-  <h1>Post a new photo</h1>
+  <div class="header">
+    <h1>Post a new photo</h1>
   </div>
-  <div class="container">
+</div>
+
   <!-- a photo form for users to upload a new photo -->
+  <%= image_tag("asian.jpg", :class => "blurred") %> 
   <table class= "table table-striped">
-      <br>
+    <br>
       <%= form_for @photo, :html => { :multipart => true } do |f| %>
-      <br>
-    <div class="field">
-      <h3>title:</h3>
-      <%= f.text_field :title %>
-      <br> 
-      <h3>Caption:</h3>
-      <%= f.text_field :caption %>
-      <br>
-      <%= f.file_field :image %>
-      <br>
-      <%= f.submit "Save changes", class: "btn btn-primary" %>
-    </div>
-    <% end %> 
+    <br>
+<div class="container">
+  <div class="field">
+    <h1>Title:</h1>
+    <%= f.text_field :title %>
+    <br> 
+    <h1>Caption:</h1>
+    <%= f.text_field :caption %>
+    <br>
+    <%= f.file_field :image %>
+    <br>
+    <%= f.submit "Save changes", class: "btn btn-primary" %>
+  </div>
+  <% end %> 
   </table>
 </div>
-<div class="new-photo">
+</div>
+<div class='footer'>
   <div class="text-center">
     <br>
     <br>
     <br>
     <h1>&copy; PhotoSnap</h1>
   </div>
-</div> 
+</div>
+
+
 
 
