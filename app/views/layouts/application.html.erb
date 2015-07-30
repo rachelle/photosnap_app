@@ -22,7 +22,7 @@
     <div class="pull-right">
       <% if current_user %> 
         Hello, <%= current_user.name %>
-        <%= image_tag current_user.avatar.url(:thumb), class: 'img-circle' %>
+        <%= image_tag current_user.avatar.url(:thumb), class: 'img-circle user-avatar' %>
       <% end %> 
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->

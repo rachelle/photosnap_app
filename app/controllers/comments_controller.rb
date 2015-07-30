@@ -1,28 +1,26 @@
 class CommentsController < ApplicationController
-  before_action :set_post
+  before_action :set_photo, only: [:new, :create]
 
   def index
-   photo = Photo.find(params[:photo_id])
    @comments = photo.comments
   end
 
+  def new
+    #creates a comment for the given photo
+    @comment = @photo.comments.new
+    @comment.user = current_user.id
+  end
+
   def create
-    @photo = Photo.find(params[:photo_id])
-    @comment = Comment.new(params[:comment])
-    @comment.photo = @photo
+    @comment = @photo.comments.new(comment_params)
+    #for the new comment sets the user to be current_user
     @comment.user = current_user
     if @comment.save
       flash[:success] = "Comment posted!"
-      redirect_to current_user
+      redirect_to photo_path(@photo.id)
     else 
       render 'new'
     end
-  end
-
-  def new
-    @post.find(params[:id]
-    @comment = @post.comments.new
-    @comment.user_id = current_user.id
   end
 
   def show
@@ -37,10 +35,10 @@ class CommentsController < ApplicationController
   end
 
   def destroy
-    photo = Photo.find(params[:photo_id])
-    @comment = photo.comments.find(params[:id])
+    @photo = Photo.find(params[:photo_id])
+    @comment = Comment.find(params[:id])
     @comment.destroy 
-    redirect_to root_path 
+    redirect_to photo_path(@photo.id)
   end
 
   private
@@ -49,7 +47,7 @@ class CommentsController < ApplicationController
     params.require(:comment).permit(:content)
   end
 
-  def set_post
-    @post = Post.find(params[:post_id])
+  def set_photo
+    @photo = Photo.find(params[:photo_id])
   end
 end

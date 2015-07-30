@@ -1,19 +1,45 @@
 <div class="text-center">
-<h2> 
-  Username:
- <%= @photo.user.name %>
-</h2>
- <%= image_tag @photo.image %>
- <h2>
-  Caption:
- <%= @photo.caption %> 
-</h2>
-
+  <h2> 
+   <%= @photo.title %>
+  </h2>
+   <%= image_tag @photo.image %>
+   <h2>
+    Description:
+    <br>
+   <%= @photo.caption %> 
+  </h2>
+  <h2> Comments: </h2>
 </div>
-
-
-  
-
-
-
-
+<div class='container'>
+  <% if current_user %>
+    <!-- nested form for photos/:id/comments/new -->
+    <%= form_for [@photo, @comment], class: 'text-center' do |f| %> 
+      Add a comment:
+      <%= f.text_field :content, class: 'form-control' %> 
+      <br>
+      <%= f.submit 'Add Comment', class: 'btn btn-success' %> 
+    <% end %>
+  <% end %>
+  <div class="row panel panel-default">
+    <% @comments.each do |comment| %>
+      <div class='comments-header panel-heading'>
+        <div class='comment-details'>
+        <%= image_tag comment.user.avatar.url(:thumb), class: 'img-circle user-avatar' %>
+        <%= link_to comment.user.name, user_path(comment.user.id) %>
+        <% if current_user.id == comment.user.id %>
+          <%= link_to 'X', photo_comment_path(@photo.id, comment.id), method: :delete, class: 'btn btn-danger btn-sm pull-right' %>
+        <% end %>
+        <br>
+        <%= time_ago_in_words(comment.created_at) %> ago
+      </div>
+      </div>
+      <div class="comments panel-body">
+        <p>
+          <%= comment.content %>
+        </p>
+      </div>
+      <br>
+    <% end %>
+  </div>
+  <br>
+</div> 

@@ -13,6 +13,9 @@ class PhotosController < ApplicationController
   end
 
   def show
+    @comments = @photo.comments.order('created_at DESC')
+    @comment = Comment.new
+    @comment.user = current_user
   end
 
   def new
@@ -47,11 +50,10 @@ class PhotosController < ApplicationController
       redirect_to users_path(current_user)
   end
 
-
   private
  
   def photo_params
-    params.require(:photo).permit(:title, :image, :caption, :url)
+    params.require(:photo).permit(:title, :image, :caption)
   end
 
   def check_logged_in
@@ -62,9 +64,3 @@ class PhotosController < ApplicationController
     @photo = Photo.find(params[:id])
   end
 end
-
-
-  
-
-
-

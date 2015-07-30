@@ -12,10 +12,9 @@ Rails.application.routes.draw do
 
    resources :users 
 
-   resources :photos do
-
+  #nested routes for photos/:id/comments
+  resources :photos do
     resources :comments
-
- end
+  end
 end
 
