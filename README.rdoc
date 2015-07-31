@@ -1,28 +1,35 @@
-== README
+# photosnap!
+![Alt](https://d13yacurqjgara.cloudfront.net/users/291221/screenshots/1486997/camara.gif)
+```sh
+$ Photosnap is an app that provides a fun and quirky way to share your life with friends through a series of pictures. Caputure a moment and share with your friends and to the world your collection of memories in photosnap. Photosnap is a simple way to share your life and  keep people up with other people. 
+```
+### Technologies
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* [Ruby on Rails] 
+* [CSS & SASS]
+* [HTML5] 
+* [Bootstrap] 
 
-Things you may want to cover:
+# User Stories
 
-* Ruby version
+ - Users have the ability to register for a new account and delete an account
+ - Users have the ability to login and loguut from their account
+ - Users can post photos and create captions for their own profile
+ - Users can update and edit their photos
+ - Users can view their own profile 
+ - Users can view a list of users who are registered to the website 
+ - Users can view others users profiles 
+ - Users can upload videos from their computer
+ - Users can view all the photos that had been uploaded onto the web application
+ - Only logged in users can view others users profiles
+ - Users can comment on other users photos and delete their comments
+ - Users can only comment when they are logged in the website
+ - User can click on other user posts to view their profiles and images they had posted
 
-* System dependencies
+## icebox
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+- Users have the ability to follow other users
+- Users can view their follower and followed count 
+- users can upload videos 
+- users can add filters to their photos
+- Users can search by name in search bar
