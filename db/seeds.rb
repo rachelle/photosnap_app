@@ -19,7 +19,6 @@ yoda = User.create(
   avatar: "http://www.empireonline.com/images/features/100greatestcharacters/photos/25.jpg"
 )
 
-
 yeezy = User.create(
   name: "yeeyz",
   email: "yeezy@yeezy.com",

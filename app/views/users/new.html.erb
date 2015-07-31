@@ -18,12 +18,11 @@
         </ul>
       </div>
     </div>
+  </div>
   <% end %>
-</div>
-<div class="container">
-  <div class="field">
-    <h3>Upload Profile Picture</h3>
-    <%= f.file_field :avatar %>
+
+
+ 
   </div>
   <br>
   <div class= "form-group"> 
@@ -44,9 +43,13 @@
   <div class="form-group">
     <h3><%= f.label :password_confirmation %></h3>
     <%= f.password_field :password_confirmation, class: 'form-control myinput' %> 
-  </div> 
+ 
   <br>
-  
+   <div class="field">
+    <h3>Upload Profile Picture</h3>
+    <%= form_for @user, :url => users_path, :html => { :multipart => true } do |form| %>
+  <%= form.file_field :avatar %>
+<% end %>
   <div class="checkbox">
     <label><input type="checkbox"> Remember me</label>
   </div>
