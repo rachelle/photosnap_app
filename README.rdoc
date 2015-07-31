@@ -1,5 +1,5 @@
 # photosnap!
-![Alt](https://d13yacurqjgara.cloudfront.net/users/291221/screenshots/1486997/camara.gif)
+![alt tag](https://d13yacurqjgara.cloudfront.net/users/291221/screenshots/1486997/camara.gif)
 ```sh
 $ Photosnap is an app that provides a fun and quirky way to share your life with friends through a series of pictures. Caputure a moment and share with your friends and to the world your collection of memories in photosnap. Photosnap is a simple way to share your life and  keep people up with other people. 
 ```
