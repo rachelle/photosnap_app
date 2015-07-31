@@ -1,16 +1,16 @@
-# photosnap!
-![alt tag](https://d13yacurqjgara.cloudfront.net/users/291221/screenshots/1486997/camara.gif)
+Photosnap!
 
-##Photosnap is an app that provides a fun and quirky way to share your life with friends through a series of pictures. Caputure a moment and share with your friends and to the world your collection of memories in photosnap. Photosnap is a simple way to share your life and  keep people up with other people. 
 
-###Technologies
+Photosnap is an app that provides a fun and quirky way to share your life with friends through a series of pictures. Caputure a moment and share with your friends and to the world your collection of memories in photosnap. Photosnap is a simple way to share your life and  keep people up with other people. 
+
+Technologies
 
 * [Ruby on Rails] 
 * [CSS & SASS]
 * [HTML5] 
 * [Bootstrap] 
 
-##User Stories
+User Stories
 
  - Users have the ability to register for a new account and delete an account
  - Users have the ability to login and loguut from their account
@@ -26,7 +26,7 @@
  - Users can only comment when they are logged in the website
  - User can click on other user posts to view their profiles and images they had posted
 
-## icebox
+icebox
 
 - Users have the ability to follow other users
 - Users can view their follower and followed count 
