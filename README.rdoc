@@ -10,6 +10,7 @@ Technologies
 * [CSS & SASS]
 * [HTML5] 
 * [Bootstrap] 
+* [paperclip]
 
 User Stories
 
