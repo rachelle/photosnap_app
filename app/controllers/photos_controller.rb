@@ -1,14 +1,7 @@
 class PhotosController < ApplicationController
   before_action :set_photo, only: [:show, :edit, :update, :destroy]
 
-  # def like
-  #   binding.pry
-  #   photo = Photo.find(params[:id])
-  #   current_user.photos << photo
-  #   redirect_to user_path(current_user)
-  # end 
-
-  def index
+ def index
     @photos = Photo.all
   end
 

@@ -29,9 +29,13 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    @photo = Photo.find(params[:id])
-    @photo.destroy
-      redirect_to users_path(current_user)
+   user = User.find(params[:id])
+   if user.destroy
+    redirect_to root_path
+   else 
+    flash[:error]=
+    "Error attempting to delete user."
+    redirect_to user_path(current_user)
   end
 end
 
@@ -40,6 +44,7 @@ end
     def user_params
       params.require(:user).permit(:name, :avatar, :email, :password, :password_confirmation)
     end
+  end
  
 
 

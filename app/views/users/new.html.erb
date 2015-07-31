@@ -21,6 +21,11 @@
   <% end %>
 </div>
 <div class="container">
+  <div class="field">
+    <h3>Upload Profile Picture</h3>
+    <%= f.file_field :avatar %>
+  </div>
+  <br>
   <div class= "form-group"> 
     Name:
     <%= f.text_field :name, class: 'form-control myinput' %>
@@ -31,10 +36,7 @@
     <%= f.text_field :email, class: 'form-control myinput' %>
   </div> 
   <br>
-  <div class="field">
-    <h3>Upload Profile Picture</h3>
-    <%= f.file_field :avatar %>
-  </div>
+  
   <br>
   <div class="form-group">
     <%= f.label :password %> 
