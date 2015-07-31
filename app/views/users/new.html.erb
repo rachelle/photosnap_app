@@ -27,23 +27,22 @@
   </div>
   <br>
   <div class= "form-group"> 
-    Name:
+    <h3>Name:</h3>
     <%= f.text_field :name, class: 'form-control myinput' %>
   </div>
   <br>
   <div class= "form-group">
-    <%= f.label :email %> 
+   <h3><%= f.label :email %></h3>
     <%= f.text_field :email, class: 'form-control myinput' %>
   </div> 
   <br>
-  
   <br>
   <div class="form-group">
-    <%= f.label :password %> 
+   <h3><%= f.label :password %></h3>
     <%= f.password_field :password, class: 'form-control myinput' %>
   </div> 
   <div class="form-group">
-    <%= f.label :password_confirmation %> 
+    <h3><%= f.label :password_confirmation %></h3>
     <%= f.password_field :password_confirmation, class: 'form-control myinput' %> 
   </div> 
   <br>
@@ -52,18 +51,18 @@
     <label><input type="checkbox"> Remember me</label>
   </div>
   <div class="text-center">  
-
-  <div class="actions"> 
-    <%= f.submit "submit",class: "button" %>
-  </div> 
+    <div class="actions"> 
+      <%= f.submit "submit",class: "button" %>
+    </div> 
   <% end %> 
 </div>
+<div class="container">
 <div class="row">
-  <div class="text-center">
-    <br>
-    <h1>Show your World</h1> 
+  <br>
+  <h1>Show your World</h1> 
   </div>
-  <div class="col-sm-4">
+  <br>
+  <div class="col-sm-4 space">
     <%= image_tag("green.jpg", :class => "box") %> 
   </div>
   <div class="col-sm-4">
@@ -72,9 +71,9 @@
   <div class="col-sm-4">
     <%= image_tag("water.jpg", :class => "box") %>
   </div>
-  </div>
 </div>
-    <div class="footer">
+</div>
+<div class="footer">
       <div class="text-center">
       <br>
       <br>

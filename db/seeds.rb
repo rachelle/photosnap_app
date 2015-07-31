@@ -64,4 +64,3 @@ yoda_comment = Comment.create(
 yeezy_comment = Comment.create(
   content: "looking good for your age yodaaaaaaa",
 )
-
