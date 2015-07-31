@@ -33,7 +33,7 @@ oliva = User.create(
   email: "oliva@oliva.com",
   password: "olivia",
   password_confirmation: "olivia",
-  avatar: "https://s-media-cache-ak0.pinimg.com/236x/83/3f/7f/833f7f5bf58b85f4226554cf71c24aa2.jpg",
+  avatar: "https://s-media-cache-ak0.pinimg.com/236x/83/3f/7f/833f7f5bf58b85f4226554cf71c24aa2.jpg"
 )
 
 pika = User.create(
@@ -41,14 +41,14 @@ pika = User.create(
   email: "pika@pika.com",
   password: "pika",
   password_confirmation: "pika",
-  avatar: "pika_happy.jpg",
+  avatar: "pika_happy.jpg"
 )
 
 #creates a new post
 yoda_photo = Photo.create{
   title: "loving myself",
   image: "https://charmedyogi.files.wordpress.com/2013/01/yoda-meditating.jpg",
-  caption: "just feeling the force within me",
+  caption: "just feeling the force within me"
   }
 
 yeezy_photo = Photo.create(
@@ -63,5 +63,5 @@ yoda_comment = Comment.create(
 )
 
 yeezy_comment = Comment.create(
-  content: "looking good for your age yodaaaaaaa",
+  content: "looking good for your age yodaaaaaaa"
 )
