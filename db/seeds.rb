@@ -17,7 +17,7 @@ yoda = User.create(
   password: "yoda",
   password_confirmation: "yoda",
   avatar: "http://www.empireonline.com/images/features/100greatestcharacters/photos/25.jpg"
-  )
+)
 
 
 yeezy = User.create(
@@ -26,6 +26,7 @@ yeezy = User.create(
   password: "yeezy",
   password_confirmation: "yeezy",
   avatar: "http://localhost:3000/system/users/avatars/000/000/003/medium/yeezy.jpg?1438283695"
+)
 
 oliva = User.create(
   name: "oliva",
@@ -40,7 +41,7 @@ pika = User.create(
   email: "pika@pika.com",
   password: "pika",
   password_confirmation: "pika",
-  avatar: "http://localhost:3000/system/users/avatars/000/000/005/medium/pikachu__kawaii___by_hayley_wilson-d5ylde8.png?1438289635",
+  avatar: "pika_happy.jpg",
 )
 
 #creates a new post
